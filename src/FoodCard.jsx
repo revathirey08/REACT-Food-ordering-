@@ -1,6 +1,7 @@
 function FoodCard(props) {
 
   return (
+
     <div className="card">
 
       <h2>
@@ -8,6 +9,8 @@ function FoodCard(props) {
       </h2>
 
       <h3>Price : ₹{props.price}</h3>
+
+      <h3>Rating : ⭐ {props.rating}</h3>
 
       {props.available ? (
         <p className="available">Available</p>
@@ -19,10 +22,11 @@ function FoodCard(props) {
         onClick={props.add}
         disabled={!props.available}
       >
-        Add to Cart
+        Add To Cart
       </button>
 
     </div>
+
   );
 }
 
